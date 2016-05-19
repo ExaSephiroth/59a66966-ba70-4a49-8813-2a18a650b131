@@ -1,0 +1,2 @@
+serviceClass: com.google.gwt.sample.stockwatcher.client.CurrencyService
+path: 63BC43BE262FC30AA4C4179FFF956BB4.gwt.rpc
