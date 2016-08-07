@@ -1,1 +1,5 @@
-# 668300e3-b60b-49a8-8db5-a3cbad014ab9
+Tried out Google Web Toolkit.
+
+Made a little currency converter.
+
+Used HTML, CSS, JAVA, GWT & http://fixer.io/ for currency data.
