@@ -21,10 +21,10 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 public class CurrencyServiceImpl extends RemoteServiceServlet implements CurrencyService {
 
 	private static final long serialVersionUID = 1L;
-	private final String JSON_BASE_URL = "http://api.fixer.io/latest?base=HKD";
-	// use String instead of as ENUM seems flawed in GWT
-	private final String PRESENT_CURRENCY = "PRESENT_CURRENCY";
-	private final String HISTORICAL_CURRENCY = "HISTORICAL_CURRENCY";
+	private static final String JSON_BASE_URL = "http://api.fixer.io/latest?base=HKD";
+	// using String as ENUM seems flawed in GWT
+	private static final String PRESENT_CURRENCY = "PRESENT_CURRENCY";
+	private static final String HISTORICAL_CURRENCY = "HISTORICAL_CURRENCY";
 
 	@Override
 	public String getData(String input) {
@@ -42,7 +42,7 @@ public class CurrencyServiceImpl extends RemoteServiceServlet implements Currenc
 		HttpClient client = HttpClientBuilder.create().build();
 		HttpGet request = new HttpGet(url);
 		request.addHeader("accept", "application/json");
-	    try {
+	    	try {
 			HttpResponse response = client.execute(request);
 			HttpEntity entity = response.getEntity();
 			return EntityUtils.toString(entity, "UTF-8");
@@ -62,5 +62,4 @@ public class CurrencyServiceImpl extends RemoteServiceServlet implements Currenc
 		CalendarUtil.addMonthsToDate(d, -1);
 		return "http://api.fixer.io/" + dtf.format(d) + "?base=HKD";
 	}
-
 }
