@@ -24,6 +24,7 @@ public class CurrencyServiceImpl extends RemoteServiceServlet implements Currenc
 	private static final String JSON_BASE_URL = "http://api.fixer.io/latest?base=HKD";
 	// using String as ENUM seems flawed in GWT
 	// test
+
 	private static final String PRESENT_CURRENCY = "PRESENT_CURRENCY";
 	private static final String HISTORICAL_CURRENCY = "HISTORICAL_CURRENCY";
 
