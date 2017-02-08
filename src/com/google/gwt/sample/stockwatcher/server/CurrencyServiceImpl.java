@@ -25,6 +25,7 @@ public class CurrencyServiceImpl extends RemoteServiceServlet implements Currenc
 	// using String as ENUM seems flawed in GWT
 	// test
 	// branch test
+	// css change
 
 	private static final String PRESENT_CURRENCY = "PRESENT_CURRENCY";
 	private static final String HISTORICAL_CURRENCY = "HISTORICAL_CURRENCY";
